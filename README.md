@@ -1,85 +1,15 @@
 # ML-DRIVEN-MITM-ATTACK-DETECTION-IN-SMART-GRID
-🔐 ML-Driven MITM Attack Detection in Smart Grid
-This repository contains the implementation of a Machine Learning (ML)-based Intrusion Detection System (IDS) for detecting Man-in-the-Middle (MITM) attacks in Smart Grid systems, specifically in Modbus TCP/IP environments. The project leverages various ML models, with performance boosted using Genetic Algorithm (GA) optimization.
+Project Overview
 
-🧠 Project Objective
-Detect MITM (Man-in-the-Middle) attacks using various machine learning models.
+This project focuses on detecting Man-in-the-Middle (MITM) attacks in Smart Grid systems using Machine Learning (ML). It addresses vulnerabilities in the Modbus protocol, particularly to ARP spoofing, by evaluating seven ML models—XGBoost, Random Forest, Logistic Regression, SVM, Decision Tree, kNN, and Gradient Boosting—for anomaly detection in Modbus TCP/IP traffic.
 
-Enhance model performance using Evolutionary Algorithms (Genetic Algorithm).
+The models are tested in both default and Genetic Algorithm (GA)-optimized configurations using a dataset of 21,384 network packets with 12 features. Key preprocessing steps include handling noisy values, feature selection with Recursive Feature Elimination (RFE), class balancing with SMOTE, and feature scaling. The GA-optimized Gradient Boosting model achieved the best performance: Accuracy 90%, Precision 88%, Recall 92%, F1-Score 90%, and ROC AUC 98%.
 
-Evaluate and identify the best-performing model for deployment.
+Installation
+Clone the Repository:
+git clone https://github.com/your-username/ml-mitm-smart-grid.git
+cd ml-mitm-smart-grid
 
-🗂 Dataset
-The dataset used in this project (modbus_dataset.xlsx) is based on Modbus TCP/IP traffic data. It contains:
-
-21,384 rows
-
-12 features including function codes, byte count, protocol types, and a binary label indicating attack or normal traffic.
-
-Key Features:
-Packet Timing and Length
-
-Function Code, Transaction ID, and Unit ID
-
-Derived numerical features extracted from packet summaries (e.g., from the Info field)
-
-Binary label: 0 = Normal, 1 = Attack
-
-🔍 Methodology
-Models Implemented:
-Logistic Regression
-
-K-Nearest Neighbors (kNN)
-
-Decision Tree
-
-Support Vector Machine (SVM)
-
-Gradient Boosting
-
-XGBoost
-
-Random Forest
-
-Workflow:
-Data Preprocessing
-
-Handling missing and noisy values
-
-Feature selection via Recursive Feature Elimination (RFE)
-
-Data balancing using SMOTE
-
-Standardization using StandardScaler
-
-Model Training
-
-Baseline training with default hyperparameters
-
-Hyperparameter tuning using Genetic Algorithm (GA)
-
-Evaluation Metrics
-
-Accuracy, Precision, Recall, F1-score, ROC-AUC
-
-⚙️ Technologies Used
-Python 3.9
-
-Google Colab (for cloud-based execution)
-
-Libraries: pandas, numpy, sklearn, xgboost, deap, imbalanced-learn, matplotlib, seaborn
-
-📊 Results Summary
-| Model                 | Accuracy (Default) | Accuracy (Optimized) | Best Metric (GA)      |
-| --------------------- | ------------------ | -------------------- | --------------------- |
-| Gradient Boosting     | 89%                | 90%                  | Recall: 92%, AUC: 98% |
-| XGBoost               | 89%                | 90%                  | High Precision        |
-| Random Forest         | 89%                | 90%                  | Robustness            |
-| Logistic Regression   | 88%                | 89%                  | Highest Recall (93%)  |
-| Others (SVM, DT, kNN) | \~88%              | \~89-90%             | Good ROC-AUC          |
-
-
-✅ Optimized Gradient Boosting gave the best trade-off among all models.
 
 📌 Conclusion
 The project demonstrates that:
