@@ -5,43 +5,7 @@ This project focuses on detecting Man-in-the-Middle (MITM) attacks in Smart Grid
 
 The models are tested in both default and Genetic Algorithm (GA)-optimized configurations using a dataset of 21,384 network packets with 12 features. Key preprocessing steps include handling noisy values, feature selection with Recursive Feature Elimination (RFE), class balancing with SMOTE, and feature scaling. The GA-optimized Gradient Boosting model achieved the best performance: Accuracy 90%, Precision 88%, Recall 92%, F1-Score 90%, and ROC AUC 98%.
 
-Repository Contents
 
-
-
-
-
-final_report.pdf: Comprehensive project documentation covering introduction, methodology, implementation, results, and references.
-
-
-
-code/: Directory containing the Python script (mitm_detection.py) for data preprocessing, model training, GA optimization, and evaluation.
-
-
-
-results/: Directory with output files:
-
-
-
-
-
-model_performance_results.xlsx: Performance metrics for all models.
-
-
-
-classification_reports.txt: Detailed classification reports.
-
-
-
-confusion_matrices.png: Visualizations of confusion matrices.
-
-
-
-model_accuracy_barplot.png: Bar plot comparing model accuracies.
-
-
-
-dataset/: Placeholder for modbus_dataset_11.xlsx (not included due to size; available upon request).
 
 Installation
 
