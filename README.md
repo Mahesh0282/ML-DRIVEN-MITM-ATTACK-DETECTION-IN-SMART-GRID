@@ -20,18 +20,18 @@ Dataset:
    Ensure the dataset is in Excel format with expected features (protocol_encoded, Function Code, etc.).
 
 Methodology
- Data Preprocessing:
+1.Data Preprocessing:
    Handle noisy values (e.g., -1 replaced with median).
    Select top 8 features using RFE with Random Forest.
    Balance classes with SMOTE.
    Split data (80% train, 20% test) with stratification.
    Apply Standard searing for feature scaling.
 
-Models:
+2.Models:
    Evaluated: XGBoost, Random Forest, Logistic Regression, SVM, Decision Tree, kNN, Gradient Boosting.
    Metrics: Accuracy, Precision, Recall, F1-Score, ROC AUC, Cross-Validation F1-Score.
 
-Optimization:
+3.Optimization:
   Genetic Algorithm with 20 individuals, 10 generations, and tournament selection.
   Hyperparameter spaces defined for each model (e.g., n_estimators: 50-200 for XGBoost).
 
