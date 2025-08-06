@@ -1,4 +1,4 @@
-# ML-DRIVEN-MITM-ATTACK-DETECTION-IN-SMART-GRID
+
 #  ML-Driven MITM Attack Detection in Smart Grid
 
 > A machine learning-powered intrusion detection system for identifying Man-in-the-Middle (MITM) attacks in Modbus TCP/IP-based smart grid networks.
